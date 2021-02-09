@@ -5,7 +5,7 @@
 type User {
   id: ID!
   username: String!
-  password: Boolean!
+  password: String!
   email: String!
 }
 

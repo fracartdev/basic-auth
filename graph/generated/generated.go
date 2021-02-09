@@ -199,7 +199,7 @@ var sources = []*ast.Source{
 type User {
   id: ID!
   username: String!
-  password: Boolean!
+  password: String!
   email: String!
 }
 
@@ -539,9 +539,9 @@ func (ec *executionContext) _User_password(ctx context.Context, field graphql.Co
 		}
 		return graphql.Null
 	}
-	res := resTmp.(bool)
+	res := resTmp.(string)
 	fc.Result = res
-	return ec.marshalNBoolean2bool(ctx, field.Selections, res)
+	return ec.marshalNString2string(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _User_email(ctx context.Context, field graphql.CollectedField, obj *model.User) (ret graphql.Marshaler) {

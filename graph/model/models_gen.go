@@ -11,6 +11,6 @@ type NewUser struct {
 type User struct {
 	ID       string `json:"id"`
 	Username string `json:"username"`
-	Password bool   `json:"password"`
+	Password string `json:"password"`
 	Email    string `json:"email"`
 }
